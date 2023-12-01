@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Internally rewrite /robot to /robot.html
+RewriteRule ^robot$ /robot.html [L]
+
+# Redirect all other requests except for /robot.html, /images/*, and /assets/*
+RewriteCond %{REQUEST_URI} !^/robot.html$
+RewriteCond %{REQUEST_URI} !^/images/
+RewriteCond %{REQUEST_URI} !^/assets/
+RewriteRule ^.*$ /robots.txt [R=301,L]
