@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rókales Minecraft</title>
+    <meta name="title" content="YourServer" />
+    <meta name="description" content="YourServer Description" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gg.rokal.es" />
+    <meta property="og:title" content="YourServer" />
+    <meta property="og:description" content="YourServer Description" />
+    <meta
+      property="og:image"
+      content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gg.rokal.es/" />
+    <meta property="twitter:title" content="YourServer" />
+    <meta property="twitter:description" content="YourServer Description" />
+    <meta name="theme-color" content="#5e8849" />
+    <meta
+      property="twitter:image"
+      content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Rókales Minecraft</h1>
+      <button onclick="copyIp()">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184"
+          />
+        </svg>
+        gg.rokal.es
+      </button>
+      <h2>Minimum: 1.16.5 verzió javasolt.</h2>
+      <p>
+        Célunk a Rókales közösségének összehozása, és egy olyan pozitív
+        környezet kialakítása, <strong>ahol mindenki jól érzi magát</strong>.
+        Ezért is hoztuk létre a Minecraft szerverünket, ahol a játékosoknak
+        <strong
+          >lehetőségük van a kreativitásuk kibontakoztatására, és a
+          közösségünkkel való interakcióra</strong
+        >. Legyen szó akár egy kis építészetről, vagy egy nagyobb közösségi
+        projekt megvalósításáról. <br /><signature
+          >- A Rókales csapata</signature
+        >
+      </p>
+      <nav>
+        <a title="" onClick="(showRules())">Szabályzat</a>
+        <a title="" onClick="(showHelp())">Csatlkaozási segédlet</a>
+      </nav>
+    </main>
+    <div id="modal" class="modal">
+      <div class="modal-content"></div>
+    </div>
+    <script>
+      function copyIp() {
+        navigator.clipboard.writeText("gg.rokal.es");
+      }
+
+      function showModal(modal) {
+        document.querySelector(".modal-content").innerHTML =
+          `<span class="modal-close" onClick="(hideModal())">&times;</span>` +
+          modal;
+        document.getElementById("modal").style.display = "block";
+      }
+
+      function hideModal() {
+        document.getElementById("modal").style.display = "none";
+      }
+
+      function showRules() {
+        let modal = `
+                    <p class="modal-title">Szabályzat</p>
+                    <p>
+                      Szerverünk egy barátságos és támogató közösség, ahol mindenkit
+                      szeretettel várunk. Ahhoz, hogy mindenki számára kellemes legyen az
+                      itt eltöltött idő, néhány szabályt be kell tartanunk. Kérünk, olvasd
+                      el figyelmesen és tartsd be ezeket a szabályokat! 😊
+                    </p>
+
+                    <h2 class="bold">Szabályok:</h2>
+                    <ul>
+                      <li>
+                        <span class="bold">Hackelt kliensek tilalma:</span> A tisztességes
+                        játék érdekében hackelt kliensek használata szigorúan tilos! 🚫
+                      </li>
+                      <li>
+                        <span class="bold">Mások szidásának tilalma:</span> Mindig legyél
+                        kedves és tisztelettudó a többi játékossal szemben. Szidni vagy
+                        bántani senkit sem szabad! 🤝
+                      </li>
+                      <li>
+                        <span class="bold">Tiszteletlen beszéd tilalma:</span> A közösségi
+                        légkör fenntartása érdekében kerüljük a tiszteletlen
+                        megnyilvánulásokat. 💬
+                      </li>
+                      <li>
+                        <span class="bold">Gyűlöletkeltés tilalma:</span> Szerverünkön nincs
+                        helye a gyűlöletkeltő megnyilvánulásoknak. Mindenkit egyenlően
+                        tiszteletben tartunk. ❤️
+                      </li>
+                      <li>
+                        <span class="bold">Politikai anyagok tilalma:</span> Politikai
+                        tartalmak megosztása nem engedélyezett. Koncentráljunk inkább a
+                        játékra! 🎮
+                      </li>
+                      <li>
+                        <span class="bold">Rombolás tilalma:</span> Más játékosok
+                        építményeinek rongálása tilos. Építsünk inkább együtt! 👷‍♂️👷‍♀️
+                      </li>
+                      <li>
+                        <span class="bold"
+                          >Korhatáros tartalmak megosztásának tilalma:</span
+                        >
+                        Gondoskodjunk arról, hogy mindenki biztonságban érezze magát, ezért
+                        18+ tartalmak megosztása tilos. 🛑
+                      </li>
+                      <li>
+                        <span class="bold">Büntetés kijátszásának tilalma:</span> Ha
+                        szabálytalanság miatt büntetést kaptál, ne próbáld kijátszani azt.
+                        Tanulj a hibádból! 📚
+                      </li>
+                      <li>
+                        <span class="bold"
+                          >Szerverre rossz hírnevet hozó cselekedetek tilalma:</span
+                        >
+                        Minden tettünkkel a közösségünket szolgáljuk. Kerüljük a
+                        rosszhírnevet okozó magatartást. 🌟
+                      </li>
+                    </ul>
+
+                    <p class="italic">
+                      Köszönjük, hogy elolvastad és betartod a szabályokat! Együtt
+                      építhetjük fel a
+                      <span class="bold">Rókales | Minecraft</span> közösségét. Jó játékot!
+                      😄
+                    </p>
+            `;
+        showModal(modal);
+      }
+
+      function showHelp() {
+        let modal = `
+                    <h3>Szerver Csatlakozási Útmutatója!</h3>
+
+            <h3>1. Lépés: Minecraft Letöltése és Telepítése</h3>
+            <li>Első lépésben töltsd le és telepítsd a Minecraftot. Két lehetőséged van: az ingyenes SkLauncher vagy a hivatalos, fizetős Minecraft indító.</li>
+
+            <h3>A. Ingyenes verzió: SkLauncher</h3>
+            <li>Látogass el a <a href='https://skmedix.pl/downloads'>SkLauncher letöltőoldalára</a>.</li>
+            <li>Válaszd ki az operációs rendszerednek megfelelő verziót.</li>
+            <li>Töltsd le és telepítsd az alkalmazást.</li>
+            <li>Indítsd el a SkLaunchert, klikkelj az "Offline mode"-ra, és válassz egy felhasználónevet.</li>
+
+            <h3>B. Fizetős verzió: Hivatalos Minecraft Indító</h3>
+            <li>Vásárolj meg egy Minecraft licenszet a <a href='https://minecraft.net'>Minecraft hivatalos oldalán</a>.</li>
+            <li>Töltsd le a Minecraft indítót az oldalról.</li>
+            <li>Telepítsd és indítsd el a játékot.</li>
+            <li>Jelentkezz be a Microsoft fiókoddal.</li>
+
+            <h3>2. Lépés: Csatlakozás a Szerverhez</h3>
+            <p>Miután telepítetted a Minecraftot, következik a szerverhez való csatlakozás.</p>
+
+            <li>Indítsd el a Minecraftot (SkLauncher vagy hivatalos indító).</li>
+            <li>A játék főmenüjében válaszd a 'Multiplayer' (Többjátékos) opciót.</li>
+            <li>Kattints a 'Add Server' (Szerver hozzáadása) gombra.</li>
+            <li>A 'Server Name' (Szerver neve) mezőbe írd be: <b>Rókales | Minecraft</b>.</li>
+            <li>A 'Server Address' (Szerver címe) mezőbe írd be az IP címet: <b>gg.rokal.es</b>.</li>
+            <li>Kattints a 'Done' (Kész) gombra.</li>
+            <li>A listában válaszd ki a szervert, és kattints a 'Join Server' (Csatlakozás a szerverhez) gombra, vagy szimplán dupla kikkelj a szerveren.</li>
+
+            <p>🎉 És már kész is! Mostantól játszhatsz a <i>Rókales | Minecraft</i> szerveren barátaiddal. Kellemes játékot! 🎉</p>
+            `;
+        showModal(modal);
+      }
+    </script>
+  </body>
+</html>
